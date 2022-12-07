@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zach.Page1">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Grid.Column="0" Grid.Row="0" BackgroundColor="White" Grid.RowSpan="3" Grid.ColumnSpan="6" />
+        <ImageButton Source="arrow.png" Grid.Column="0" Grid.Row="0"  Margin="0,0,10,30" Clicked="ImageButton_Clicked"/>
+        <Image Source="sber.png" Grid.Row="0" Grid.Column="5" Margin="6,0,0,20"/>
+        <Label Text="Кредитный Калькулятор" Margin="-70,0,0,0" Grid.Column="2" TextColor="Green" Grid.Row="1" FontSize="Title" FontAttributes="Bold" Grid.ColumnSpan="4" />
+        <Frame BackgroundColor="#83D96E" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="6" Grid.RowSpan="6"/>
+        <Frame CornerRadius="10" BackgroundColor="White" Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="4">
+            <Label Text="Сколько вам нужно" TextColor="Black" Margin="0,-10,0,0"/>
+        </Frame>
+        <Slider MinimumTrackColor="Red"  MaximumTrackColor="Red" x:Name="slider" ThumbColor="#83D96E" Grid.Column="1" Grid.Row="3"   Grid.ColumnSpan="4" PropertyChanged="slider_PropertyChanged" Maximum="100000" Minimum="30000"/>
+        <Label Text="от 30.000" Grid.Column="1" Grid.Row="3" TextColor="Black" FontSize="Micro" Grid.ColumnSpan="2" Margin="20,50,0,0"/>
+        <Label Text="до 100.000" Grid.Column="1" Grid.Row="3" TextColor="Black" FontSize="Micro" Grid.ColumnSpan="4" Margin="180,50,0,0"/>
+        <Frame BackgroundColor="White" Grid.Column="2" Grid.Row="4" CornerRadius="10" Grid.ColumnSpan="3" Margin="-18,0,40,0">
+            <Entry x:Name="credit" Placeholder="введите срок кредита" TextColor="Black" FontSize="Micro" Grid.Column="2" Grid.Row="3" PlaceholderColor="Black" Margin="0,0,0,0"/>
+        </Frame>
+        <Button Text="Рассчитать" BackgroundColor="#375F40" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="4" Grid.RowSpan="1" CornerRadius="50" Clicked="Button_Clicked"/>
+        <Frame BackgroundColor="White" Grid.Column="2" Grid.Row="6" CornerRadius="10" Grid.ColumnSpan="2" Margin="-18,20,-18,0">
+            <Label x:Name="EveryMounthPay" Text="ежемесячный платеж" TextColor="Black" FontSize="Micro" Grid.Column="2" Grid.Row="3" Margin="10,-3,0,0"/>
+        </Frame>
+
+    </Grid>
+</ContentPage>
